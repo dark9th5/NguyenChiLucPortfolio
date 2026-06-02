@@ -330,12 +330,19 @@ function initScrollReveal() {
             }
         });
     }, {
-        threshold: 0.12
+        threshold: 0.02 // Lower threshold to ensure triggering on all screens
     });
 
     reveals.forEach(reveal => {
         observer.observe(reveal);
     });
+
+    // Fallback: Force reveal all sections after 1.5 seconds as a backup
+    setTimeout(() => {
+        reveals.forEach(reveal => {
+            reveal.classList.add('visible');
+        });
+    }, 1500);
 }
 
 function animateSkillBars() {
