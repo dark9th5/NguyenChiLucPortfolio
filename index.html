@@ -381,53 +381,93 @@
                 </div>
 
                 <div class="projects-container">
-                    <!-- Project 1: Chatbot Research -->
+                    <!-- Project 1: SecureCall -->
                     <div class="project-card card-glow">
-                        <div class="project-media chatbot-media">
+                        <div class="project-media securecall-media">
                             <div class="floating-tech-element">
-                                <i data-lucide="bot"></i>
+                                <i data-lucide="shield"></i>
                             </div>
                             <div class="project-number">01</div>
                         </div>
                         <div class="project-info">
                             <div class="project-tag-container">
-                                <span class="project-tag tag-ai">Research / NLP</span>
-                                <span class="project-tag tag-android">Android App</span>
+                                <span class="project-tag tag-android">Android / Flutter</span>
+                                <span class="project-tag tag-security">Security</span>
                             </div>
-                            <h3 class="project-title">Vietnamese News Chatbot Pipeline</h3>
-                            <span class="project-duration">01/2026 - Present (Research Project)</span>
+                            <h3 class="project-title">SecureCall - Spam Call & SMS Protection</h3>
+                            <span class="project-duration">06/2026 - 06/2026 (Personal Project)</span>
                             <p class="project-desc">
-                                A cross-platform automated news collection and intelligent response generation chatbot system. Integrates a modern Android front-end with an advanced, enterprise-grade Vietnamese Natural Language Processing (NLP) RAG backend.
+                                A comprehensive, client-server mobile communication security application designed to protect Vietnamese users against spam calls and phishing messages. Combines real-time native Android background monitoring with an enterprise Java Spring Boot backend.
                             </p>
                             <ul class="project-features">
-                                <li><i data-lucide="check" class="feat-check"></i> Developed Jetpack Compose Android client with MVVM structure.</li>
-                                <li><i data-lucide="check" class="feat-check"></i> Formulated FastAPI NLP pipeline using Underthesea & Sentence-Transformers.</li>
-                                <li><i data-lucide="check" class="feat-check"></i> Created custom chunking, named entity recognition (NER), and deduplication layers.</li>
-                                <li><i data-lucide="check" class="feat-check"></i> Engineered Qdrant semantic vector search & LLM response generation with MySQL logging.</li>
+                                <li><i data-lucide="check" class="feat-check"></i> Developed native Broadcast Receivers (`SmsReceiver`, `CallReceiver`) to intercept threats at the Android OS layer.</li>
+                                <li><i data-lucide="check" class="feat-check"></i> Configured AI-driven SMS analysis for fake URLs, domain ages, and financial impersonation fraud.</li>
+                                <li><i data-lucide="check" class="feat-check"></i> Built a high-contrast Senior Mode featuring emergency quick-dial contacts and text-to-speech warnings.</li>
+                                <li><i data-lucide="check" class="feat-check"></i> Created a Java Spring Boot backend with MySQL and ngrok hosting to sync crowdsourced blacklists.</li>
                             </ul>
                             <div class="project-tech-stack">
-                                <span class="tech-pill">Kotlin</span>
-                                <span class="tech-pill">Jetpack Compose</span>
-                                <span class="tech-pill">FastAPI</span>
-                                <span class="tech-pill">Qdrant</span>
-                                <span class="tech-pill">NLP</span>
+                                <span class="tech-pill">Flutter</span>
+                                <span class="tech-pill">Android Native</span>
+                                <span class="tech-pill">Java Spring Boot</span>
                                 <span class="tech-pill">MySQL</span>
+                                <span class="tech-pill">Broadcast Receivers</span>
+                                <span class="tech-pill">AI SMS Filtering</span>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/dark9th5/Chatbot" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                                <a href="https://github.com/dark9th5/SecureCall" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
                                     <i data-lucide="github"></i> <span>View Repository</span>
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Project 2: Family Management -->
+                    <!-- Project 2: FaceCheck -->
+                    <div class="project-card card-glow">
+                        <div class="project-media facecheck-media">
+                            <div class="floating-tech-element">
+                                <i data-lucide="camera"></i>
+                            </div>
+                            <div class="project-number">02</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tag-container">
+                                <span class="project-tag tag-ai">Biometrics / AI</span>
+                                <span class="project-tag tag-android">Android App</span>
+                            </div>
+                            <h3 class="project-title">FaceCheck - Biometric Attendance System</h3>
+                            <span class="project-duration">06/2026 - 06/2026 (Personal Project)</span>
+                            <p class="project-desc">
+                                A high-security, native Android face-recognition employee attendance tracking system. Implements clean architecture and local on-device neural network feature extraction to guarantee data privacy.
+                            </p>
+                            <ul class="project-features">
+                                <li><i data-lucide="check" class="feat-check"></i> Engineered a native Kotlin Android app with Jetpack Compose using strict Clean Architecture rules.</li>
+                                <li><i data-lucide="check" class="feat-check"></i> Integrated MobileFaceNet TFLite neural model for local 192-dimensional face embedding extraction.</li>
+                                <li><i data-lucide="check" class="feat-check"></i> Deployed Firebase Authentication and Cloud Firestore backends with robust data shape validations.</li>
+                                <li><i data-lucide="check" class="feat-check"></i> Formulated high-performance Cosine Similarity algorithms and covered logic with comprehensive Unit Tests.</li>
+                            </ul>
+                            <div class="project-tech-stack">
+                                <span class="tech-pill">Kotlin</span>
+                                <span class="tech-pill">Jetpack Compose</span>
+                                <span class="tech-pill">TensorFlow Lite</span>
+                                <span class="tech-pill">Firebase Firestore</span>
+                                <span class="tech-pill">Clean Architecture</span>
+                                <span class="tech-pill">Unit Testing</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/dark9th5/FaceCheck" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                                    <i data-lucide="github"></i> <span>View Repository</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: FamilyHub -->
                     <div class="project-card card-glow">
                         <div class="project-media family-media">
                             <div class="floating-tech-element">
                                 <i data-lucide="heart"></i>
                             </div>
-                            <div class="project-number">02</div>
+                            <div class="project-number">03</div>
                         </div>
                         <div class="project-info">
                             <div class="project-tag-container">
@@ -461,13 +501,53 @@
                         </div>
                     </div>
 
-                    <!-- Project 3: Gym Assistant -->
+                    <!-- Project 4: Chatbot -->
+                    <div class="project-card card-glow">
+                        <div class="project-media chatbot-media">
+                            <div class="floating-tech-element">
+                                <i data-lucide="bot"></i>
+                            </div>
+                            <div class="project-number">04</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-tag-container">
+                                <span class="project-tag tag-ai">Research / NLP</span>
+                                <span class="project-tag tag-android">Android App</span>
+                            </div>
+                            <h3 class="project-title">Vietnamese News Chatbot Pipeline</h3>
+                            <span class="project-duration">01/2026 - Present (Research Project)</span>
+                            <p class="project-desc">
+                                A cross-platform automated news collection and intelligent response generation chatbot system. Integrates a modern Android front-end with an advanced, enterprise-grade Vietnamese Natural Language Processing (NLP) RAG backend.
+                            </p>
+                            <ul class="project-features">
+                                <li><i data-lucide="check" class="feat-check"></i> Developed Jetpack Compose Android client with MVVM structure.</li>
+                                <li><i data-lucide="check" class="feat-check"></i> Formulated FastAPI NLP pipeline using Underthesea & Sentence-Transformers.</li>
+                                <li><i data-lucide="check" class="feat-check"></i> Created custom chunking, named entity recognition (NER), and deduplication layers.</li>
+                                <li><i data-lucide="check" class="feat-check"></i> Engineered Qdrant semantic vector search & LLM response generation with MySQL logging.</li>
+                            </ul>
+                            <div class="project-tech-stack">
+                                <span class="tech-pill">Kotlin</span>
+                                <span class="tech-pill">Jetpack Compose</span>
+                                <span class="tech-pill">FastAPI</span>
+                                <span class="tech-pill">Qdrant</span>
+                                <span class="tech-pill">NLP</span>
+                                <span class="tech-pill">MySQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/dark9th5/Chatbot" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                                    <i data-lucide="github"></i> <span>View Repository</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: Gym Assistant -->
                     <div class="project-card card-glow">
                         <div class="project-media gym-media">
                             <div class="floating-tech-element">
                                 <i data-lucide="activity"></i>
                             </div>
-                            <div class="project-number">03</div>
+                            <div class="project-number">05</div>
                         </div>
                         <div class="project-info">
                             <div class="project-tag-container">
@@ -553,6 +633,16 @@
                             <span class="timeline-date">03/2026 - Present</span>
                             <h4>FamilyHub Application Development</h4>
                             <p>Architected FamilyHub, integrating secure persistent communication protocols (WebSocket Secure) and hierarchical graph data mapping structures within a Kotlin MVVM application.</p>
+                        </div>
+                    </div>
+
+                    <!-- Milestone 5 -->
+                    <div class="timeline-item timeline-left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content card-glow">
+                            <span class="timeline-date">06/2026</span>
+                            <h4>SecureCall & FaceCheck Deliveries</h4>
+                            <p>Launched SecureCall, a high-performance communication security suite integrating native Android Broadcast Interceptors and Java Spring Boot backend, alongside FaceCheck, an offline-first face-recognition attendance tracker built with MobileFaceNet TFLite.</p>
                         </div>
                     </div>
                 </div>

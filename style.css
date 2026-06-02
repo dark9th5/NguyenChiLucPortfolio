@@ -1013,6 +1013,14 @@ section {
 }
 
 /* Custom visual cards instead of placeholders */
+.securecall-media {
+    background: linear-gradient(135deg, #07162c 0%, #0a2540 100%);
+    border-right: 1px solid var(--color-border);
+}
+.facecheck-media {
+    background: linear-gradient(135deg, #150927 0%, #2e0854 100%);
+    border-right: 1px solid var(--color-border);
+}
 .chatbot-media {
     background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
     border-right: 1px solid var(--color-border);
@@ -1049,6 +1057,15 @@ section {
     z-index: 2;
 }
 
+.securecall-media .floating-tech-element {
+    color: var(--color-accent-cyan);
+    border-color: rgba(56, 189, 248, 0.25);
+}
+.facecheck-media .floating-tech-element {
+    color: var(--color-accent-purple);
+    border-color: rgba(168, 85, 247, 0.25);
+    animation-delay: -1s;
+}
 .chatbot-media .floating-tech-element {
     color: var(--color-accent-cyan);
     border-color: rgba(56, 189, 248, 0.2);
