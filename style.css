@@ -27,6 +27,7 @@
     --color-accent-purple: #a855f7;
     --color-accent-pink: #ec4899;
     --color-accent-orange: #f97316;
+    --color-accent-green: #10b981;
     
     --gradient-primary: linear-gradient(135deg, #38bdf8 0%, #a855f7 100%);
     --gradient-glow: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(168, 85, 247, 0) 70%);
@@ -53,6 +54,7 @@
     --color-accent-purple: #7c3aed;
     --color-accent-pink: #db2777;
     --color-accent-orange: #ea580c;
+    --color-accent-green: #059669;
     
     --gradient-primary: linear-gradient(135deg, #0284c7 0%, #7c3aed 100%);
     --gradient-glow: radial-gradient(circle, rgba(2, 132, 199, 0.08) 0%, rgba(124, 58, 237, 0) 70%);
@@ -410,6 +412,11 @@ a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+.name-span {
+    display: inline-block;
+    white-space: nowrap;
 }
 
 /* Premium Card Glow Effect */
@@ -837,7 +844,7 @@ section {
    ========================================================================== */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
     margin-bottom: 40px;
 }
@@ -883,6 +890,11 @@ section {
     color: var(--color-accent-orange);
     border: 1px solid rgba(249, 115, 22, 0.2);
 }
+.category-icon-wrapper.green {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--color-accent-green);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
 
 .skills-category-header h3 {
     font-family: var(--font-heading);
@@ -893,44 +905,70 @@ section {
 .skills-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 12px;
 }
 
 .skill-item {
-    width: 100%;
-}
-.skill-info {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
     font-size: 0.95rem;
-    font-weight: 500;
-    color: var(--color-text-secondary);
-    margin-bottom: 8px;
-}
-.skill-percentage {
     font-weight: 600;
+    color: var(--color-text-secondary);
+    transition: var(--transition-quick);
+}
+
+.skill-item:hover {
+    background: var(--color-bg-surface-hover);
     color: var(--color-text-primary);
+    transform: translateX(6px);
 }
 
-.skill-bar-bg {
-    width: 100%;
-    height: 6px;
-    background-color: var(--color-bg-base);
-    border-radius: 4px;
-    overflow: hidden;
-}
-.skill-bar-fill {
-    height: 100%;
-    border-radius: 4px;
-    transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
-    width: 0; /* Animated via JS or CSS on visible */
+.skill-item svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    transition: var(--transition-quick);
 }
 
-/* Colors for Skill Bars */
-.cyan-bar { background: var(--color-accent-cyan); }
-.purple-bar { background: var(--color-accent-purple); }
-.pink-bar { background: var(--color-accent-pink); }
-.orange-bar { background: var(--color-accent-orange); }
+.skill-item:hover svg {
+    transform: scale(1.15);
+}
+
+/* Category-specific Border & Hover Styling */
+.cyan-card .skill-item svg { color: var(--color-accent-cyan); }
+.cyan-card .skill-item:hover {
+    border-color: var(--color-accent-cyan);
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.12);
+}
+
+.purple-card .skill-item svg { color: var(--color-accent-purple); }
+.purple-card .skill-item:hover {
+    border-color: var(--color-accent-purple);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.12);
+}
+
+.pink-card .skill-item svg { color: var(--color-accent-pink); }
+.pink-card .skill-item:hover {
+    border-color: var(--color-accent-pink);
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.12);
+}
+
+.orange-card .skill-item svg { color: var(--color-accent-orange); }
+.orange-card .skill-item:hover {
+    border-color: var(--color-accent-orange);
+    box-shadow: 0 0 15px rgba(249, 115, 22, 0.12);
+}
+
+.green-card .skill-item svg { color: var(--color-accent-green); }
+.green-card .skill-item:hover {
+    border-color: var(--color-accent-green);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.12);
+}
 
 /* Soft Skills Banner */
 .soft-skills-container {
@@ -1643,5 +1681,14 @@ section {
     .custom-cursor, 
     .custom-cursor-outline {
         display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .hero-subtitle {
+        font-size: 1.4rem;
     }
 }

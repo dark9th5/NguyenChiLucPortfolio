@@ -322,11 +322,6 @@ function initScrollReveal() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                
-                // If it's a skills section card, trigger skill bar animation
-                if (entry.target.id === 'skills') {
-                    animateSkillBars();
-                }
             }
         });
     }, {
@@ -345,16 +340,7 @@ function initScrollReveal() {
     }, 1500);
 }
 
-function animateSkillBars() {
-    const bars = document.querySelectorAll('.skill-bar-fill');
-    bars.forEach(bar => {
-        const targetWidth = bar.getAttribute('style').match(/width:\s*(\d+)%/)[1];
-        bar.style.width = '0%';
-        setTimeout(() => {
-            bar.style.width = targetWidth + '%';
-        }, 100);
-    });
-}
+
 
 /* ==========================================================================
    7. COPY TEXT & TOAST NOTIFICATION
