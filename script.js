@@ -214,15 +214,6 @@ function initParticleBackground() {
         mouse.y = null;
     });
 
-    // Handle screen resize
-    window.resizeCanvas = function() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        initParticles();
-    };
-    window.addEventListener('resize', window.resizeCanvas);
-    window.resizeCanvas();
-
     class Particle {
         constructor(x, y) {
             this.x = x;
@@ -271,6 +262,15 @@ function initParticleBackground() {
             particles.push(new Particle(Math.random() * canvas.width, Math.random() * canvas.height));
         }
     }
+
+    // Handle screen resize
+    window.resizeCanvas = function() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        initParticles();
+    };
+    window.addEventListener('resize', window.resizeCanvas);
+    window.resizeCanvas();
 
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
