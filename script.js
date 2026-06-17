@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
     initContactForm();
     initActiveNavHighlight();
+    initProjectFilters();
 });
 
 /* ==========================================================================
@@ -120,9 +121,9 @@ function initTypingEffect() {
 
     const words = [
         "Android Applications.",
-        "Jetpack Compose Interfaces.",
-        "Secure MVVM Architectures.",
-        "NLP & Chatbot Pipelines."
+        "Jetpack Compose UI.",
+        "Clean & MVVM Architecture.",
+        "Biometric & Security Solutions."
     ];
 
     let wordIdx = 0;
@@ -436,5 +437,33 @@ function initContactForm() {
             }, 6000);
             
         }, 1500);
+    });
+}
+
+/* ==========================================================================
+   10. PROJECT FILTERS
+   ========================================================================== */
+function initProjectFilters() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    if (!filterBtns.length || !projectCards.length) return;
+    
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            const category = btn.getAttribute('data-filter');
+            
+            projectCards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                if (category === 'all' || cardCategory === category) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
     });
 }

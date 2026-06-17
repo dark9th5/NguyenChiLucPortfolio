@@ -840,6 +840,110 @@ section {
 }
 
 /* ==========================================================================
+   WORK EXPERIENCE SECTION
+   ========================================================================== */
+.work-experience-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.work-card {
+    padding: 40px;
+}
+.work-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.work-logo-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.work-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    background: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent-cyan);
+}
+.work-icon-wrapper svg {
+    width: 28px;
+    height: 28px;
+}
+.work-role {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--color-text-primary);
+}
+.work-company {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+.work-duration-location {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+@media (max-width: 768px) {
+    .work-duration-location {
+        align-items: flex-start;
+    }
+}
+.work-time, .work-location {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+.work-time svg, .work-location svg {
+    width: 16px;
+    height: 16px;
+    color: var(--color-accent-purple);
+}
+.work-intro-p {
+    font-size: 1.05rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+.work-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.highlight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+.highlight-check {
+    width: 20px;
+    height: 20px;
+    color: var(--color-accent-green);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+.highlight-item span {
+    font-size: 0.98rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+}
+
+/* ==========================================================================
    SKILLS SECTION
    ========================================================================== */
 .skills-grid {
@@ -1025,6 +1129,44 @@ section {
 /* ==========================================================================
    PROJECTS SECTION
    ========================================================================== */
+.project-card.hidden {
+    display: none !important;
+}
+
+/* Project Filters */
+.project-filters {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 45px;
+    z-index: 1;
+    position: relative;
+    flex-wrap: wrap;
+}
+.filter-btn {
+    background: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: var(--font-heading);
+    cursor: pointer;
+    transition: var(--transition-quick);
+}
+.filter-btn:hover {
+    color: var(--color-text-primary);
+    border-color: var(--color-accent-cyan);
+    transform: translateY(-1px);
+}
+.filter-btn.active {
+    background: var(--gradient-primary);
+    color: #fff;
+    border-color: transparent;
+    box-shadow: var(--shadow-glow);
+}
+
 .projects-container {
     display: flex;
     flex-direction: column;
@@ -1051,12 +1193,20 @@ section {
 }
 
 /* Custom visual cards instead of placeholders */
+.voicerecoder-media {
+    background: linear-gradient(135deg, #020617 0%, #1e1b4b 100%);
+    border-right: 1px solid var(--color-border);
+}
 .securecall-media {
     background: linear-gradient(135deg, #07162c 0%, #0a2540 100%);
     border-right: 1px solid var(--color-border);
 }
 .facecheck-media {
     background: linear-gradient(135deg, #150927 0%, #2e0854 100%);
+    border-right: 1px solid var(--color-border);
+}
+.facecheckcamera-media {
+    background: linear-gradient(135deg, #1c1917 0%, #431407 100%);
     border-right: 1px solid var(--color-border);
 }
 .chatbot-media {
